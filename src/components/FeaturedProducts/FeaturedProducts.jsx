@@ -1,7 +1,11 @@
 import React from 'react';
 import './FeaturedProducts.css'
 import './FeaturedProducts_data.js'
-import featuredProductsData from "./FeaturedProducts_data.js";
+import featuredProductsData from "./FeaturedProducts_data.js"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
+import {faStarHalf} from "@fortawesome/free-solid-svg-icons";
 
 
 const FeaturedProducts = () => {
@@ -18,14 +22,14 @@ const FeaturedProducts = () => {
                             <span>{featuredProduct.brand}</span>
                             <h5>{featuredProduct.title}</h5>
                             <div className="star">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fa-solid fa-star-half-stroke"></i>
+                                <i><FontAwesomeIcon icon={faStar}/></i>
+                                <i><FontAwesomeIcon icon={faStar}/></i>
+                                <i><FontAwesomeIcon icon={faStar}/></i>
+                                <i><FontAwesomeIcon icon={faStar}/></i>
+                                <i><FontAwesomeIcon icon={faStarHalf}/></i>
                             </div>
                             <h4>{featuredProduct.price}$</h4>
-                            <a href="#"><i className="fa-solid fa-cart-shopping cart"></i></a>
+                            <a href="#"><i className={"cart"}><FontAwesomeIcon icon={faShoppingCart}/></i></a>
                         </div>
                     </div>
                 ))}
